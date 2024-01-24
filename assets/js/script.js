@@ -29,3 +29,11 @@ for (let i = 0; i < navElemArr.length; i++) {
         elemToggleFunc(overlay);
     });
 }
+
+// Header active state
+
+const header = document.querySelector("[data-header]");
+
+window.addEventListener("scroll", function () {
+    this.window.scrollY >= 400 ? header.classList.add("active") : header.classList.remove("active");
+});
